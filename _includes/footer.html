@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="index.html">
+        <div class="wordmark">Ember <span>&amp;</span> Oak</div>
+      </a>
+      <p class="order-note" style="margin-top:1rem;">
+        {{ site.data.site.street_address }}<br>
+        {% if site.data.site.address_note %}{{ site.data.site.address_note }}<br>{% endif %}
+        {{ site.data.site.city }}, {{ site.data.site.state }}
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Hours</h2>
+      {% include hours-list.html id="footer-hours" %}
+    </div>
+    <div>
+      <h2 class="footer-heading">Contact</h2>
+      <p class="contact-row">
+        {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+        <a href="{{ site.data.site.phone_href }}">{{ site.data.site.phone }}</a>
+      </p>
+      <p class="contact-row">
+        {% if site.data.site.email_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+        <a href="{{ site.data.site.email_href }}">{{ site.data.site.email }}</a>
+      </p>
+      <p><a href="{{ site.data.site.maps_url }}">Get directions</a></p>
+    </div>
+  </div>
+  {% if site.data.site.footer_credit and site.data.site.footer_credit != "" %}
+  <div class="wrap footer-credit">{{ site.data.site.footer_credit }}</div>
+  {% endif %}
+</footer>

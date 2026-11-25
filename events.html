@@ -1,0 +1,40 @@
+---
+layout: default
+title: Events
+permalink: /events.html
+description: What's on at Ember & Oak Coffee Co., including live acoustic music on the first Friday of each month.
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Ember &amp; Oak Coffee Co.</p>
+    <h1 class="section-title">Events</h1>
+    <p class="section-lead">{{ site.data.events.intro }}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem;border-top:0;">
+  <div class="wrap">
+    {% for event in site.data.events.events %}
+    <article class="friday" style="max-width:40rem;padding:1.2rem 0 1.2rem 1rem;margin-bottom:1.25rem;">
+      <h2 class="section-title" style="font-size:2rem;">{{ event.title }}</h2>
+      <p class="event-meta" style="margin:0 0 0.5rem;">
+        <strong>{{ event.next_date | default: event.date_label }}</strong>
+        {% if event.time_label %} · {{ event.time_label }}{% endif %}
+      </p>
+      {% if event.next_date and event.date_label %}<p class="order-note">{{ event.date_label }}, in the shop.</p>{% endif %}
+      <p>{{ event.description }}</p>
+    </article>
+    {% endfor %}
+    <div style="max-width:40rem;margin:1.5rem 0;">
+      {% include picture.html
+         name="section-first-fridays"
+         alt="A generated concept photograph of a small acoustic night in a coffee shop"
+         widths="640,960,1280"
+         sizes="(max-width: 800px) 100vw, 40rem"
+         width=1280
+         height=720
+         label="Placeholder image · First Friday in the room" %}
+    </div>
+    <p class="menu-page-actions"><a href="index.html">Back to the homepage</a></p>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="logo-slot">
+        <picture>
+          <source type="image/avif" srcset="assets/img/logo-mark-128.avif 128w, assets/img/logo-mark-256.avif 256w" sizes="30px">
+          <source type="image/webp" srcset="assets/img/logo-mark-128.webp 128w, assets/img/logo-mark-256.webp 256w" sizes="30px">
+          <img src="assets/img/logo-mark-128.jpg" srcset="assets/img/logo-mark-128.jpg 128w, assets/img/logo-mark-256.jpg 256w" sizes="30px" width="128" height="126" alt="" decoding="async">
+        </picture>
+      </div>
+      <div class="brand-text">
+        <div class="wordmark">Ember <span>&amp;</span> Oak</div>
+        <span class="concept-tag">Concept</span>
+      </div>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="menu.html"{% if page.url contains "menu" %} aria-current="page"{% endif %}>Menu</a>
+      <a href="events.html"{% if page.url contains "events" %} aria-current="page"{% endif %}>Events</a>
+      <a href="index.html#visit">Visit</a>
+    </nav>
+    <p class="open-pill" data-hours-status data-open-pill>
+      <i aria-hidden="true"></i>
+      <span data-hours-status-text>See hours</span>
+    </p>
+  </div>
+</header>

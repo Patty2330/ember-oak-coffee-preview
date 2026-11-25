@@ -1,0 +1,12 @@
+{% assign _id = include.id | default: "hours-list" %}
+<ol class="hours-list" id="{{ _id }}">
+  {% for h in site.data.site.hours %}
+  <li data-hours-day="{{ h.js_day }}">
+    <span>
+      {{ h.day }}
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>{{ h.open }}–{{ h.close }}</span>
+  </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,36 @@
+title: Ember & Oak Coffee Co.
+description: >-
+  A neighborhood coffee shop on Maple Street in Clarksville, TN.
+  Small-batch beans roasted in-house, espresso, pour-overs, tea, and fresh pastries.
+timezone: America/Chicago
+lang: en
+
+# Relative links so the built site opens from a local folder (file://).
+url: ""
+baseurl: ""
+permalink: /:name.html
+
+# Built copy is written to a temp dir, then copied to preview-site/ (see scripts/build.sh).
+# Do not use a folder named dist, build, or out — those are not kept on this machine.
+
+exclude:
+  - README.md
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - screenshots-shared
+  - ember-oak-preview-site.zip
+  - scripts
+  - preview-site
+  - node_modules
+  - .gitignore
+  - .pages.yml
+
+keep_files: []
+
+sass:
+  style: compressed
+
+# This preview must stay private. Do not enable GitHub Pages or any public host
+# without Jalen's approval in his own words.

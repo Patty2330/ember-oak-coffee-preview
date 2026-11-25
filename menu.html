@@ -1,0 +1,43 @@
+---
+layout: default
+title: Menu
+permalink: /menu.html
+description: Espresso drinks, pour-overs, loose-leaf tea, and pastries at Ember & Oak Coffee Co. in Clarksville, TN.
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Ember &amp; Oak Coffee Co.</p>
+    <h1 class="section-title">Menu</h1>
+    <p class="section-lead">{{ site.data.menu.intro }}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem;border-top:0;">
+  <div class="wrap">
+    {% for cat in site.data.menu.categories %}
+    <div class="menu-block" id="{{ cat.name | slugify }}">
+      <h2>{{ cat.name }}</h2>
+      {% if cat.blurb %}<p class="menu-blurb">{{ cat.blurb }}</p>{% endif %}
+      <ul class="menu-items">
+        {% for item in cat.items %}
+        <li class="menu-item">
+          <div class="menu-item-row">
+            <span class="menu-item-name">
+              {{ item.name }}
+              {% if item.sample %}{% include badge.html label="Sample" %}{% endif %}
+            </span>
+            <span class="menu-dots" aria-hidden="true"></span>
+            <span class="menu-price">
+              {{ item.price }}
+              {% if item.sample %}{% include badge.html label="Placeholder" %}{% endif %}
+            </span>
+          </div>
+          {% if item.description %}<p class="menu-desc">{{ item.description }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    <p><a href="index.html">Back to the homepage</a></p>
+  </div>
+</section>

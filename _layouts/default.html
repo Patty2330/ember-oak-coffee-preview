@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{% if page.title and page.title != "Home" %}{{ page.title }} · {% endif %}{{ site.data.site.name }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {% if site.data.site.preview %}
+  <meta name="robots" content="{{ site.data.site.robots | default: 'noindex, nofollow' }}">
+  {% endif %}
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  {% if page.url == "/" or page.url == "/index.html" %}
+  <link rel="preload" as="image" type="image/avif" href="assets/img/hero-glowing-coals-960.avif" imagesrcset="assets/img/hero-glowing-coals-640.avif 640w, assets/img/hero-glowing-coals-960.avif 960w, assets/img/hero-glowing-coals-1280.avif 1280w" imagesizes="(max-width: 800px) 100vw, 50vw" fetchpriority="high">
+  {% endif %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% if site.data.site.preview %}
+  <div class="preview-banner" role="status">{{ site.data.site.preview_banner }}</div>
+  {% endif %}
+  {% include header.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% include sticky-bar.html %}
+  {% include hours-data.html %}
+  <script src="assets/js/hours.js" defer></script>
+</body>
+</html>
