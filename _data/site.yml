@@ -53,9 +53,10 @@ timezone: "America/Chicago"
 
 hero:
   eyebrow: "Clarksville, Tennessee · Maple Street"
-  headline_line1: "Live"
-  headline_line2: "coal"
-  headline: "Live coal."
+  headline_line1: "Roasted here,"
+  headline_line2: "in small batches,"
+  headline_line3: "on Maple Street"
+  headline: "Roasted here, in small batches, on Maple Street."
   subhead: "Small-batch coffee, roasted in-house. About 30 seats, a back room for small groups, and a roast you can still feel in the cup."
   cta_primary: "See the menu"
   cta_primary_href: "menu.html"

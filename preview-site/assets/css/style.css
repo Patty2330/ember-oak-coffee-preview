@@ -1,4 +1,4 @@
-/* Ember & Oak Coffee Co. — Live Coal direction
+/* Ember & Oak Coffee Co. preview — charcoal, cream, ember CTA
    Charcoal #0B0908, cream #F3E6D0, ember CTA #FF6A21 with dark #140806 type.
    Instrument Serif + IBM Plex Mono. Contrast checked 25 Nov 2026 (see README).
    Do not put white or cream type on the ember button (fails AA). */
@@ -236,10 +236,11 @@ a:hover { color: var(--ember); }
 .hero-headline {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(4.4rem, 10.2vw, 8.4rem);
-  line-height: 0.86;
+  font-size: clamp(2.15rem, 4.2vw, 3.55rem);
+  line-height: 1.02;
   letter-spacing: -0.03em;
   color: var(--text);
+  max-width: 11.5em;
 }
 .hero-headline em {
   font-style: italic;
@@ -708,7 +709,11 @@ a:hover { color: var(--ember); }
     height: 100%;
     background: linear-gradient(180deg, rgba(11,9,8,0.5) 0%, rgba(11,9,8,0.2) 40%, rgba(11,9,8,0.88) 100%);
   }
-  .hero-headline { font-size: 4.2rem; }
+  .hero-headline {
+    font-size: clamp(2.15rem, 8.6vw, 2.55rem);
+    max-width: none;
+    line-height: 1.04;
+  }
   .hero .photo-label {
     top: 0.75rem;
     bottom: auto;

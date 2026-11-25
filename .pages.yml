@@ -114,6 +114,12 @@ content:
             type: string
           - name: headline
             type: string
+          - name: headline_line1
+            type: string
+          - name: headline_line2
+            type: string
+          - name: headline_line3
+            type: string
           - name: subhead
             type: text
           - name: cta_primary
