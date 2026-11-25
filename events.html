@@ -11,8 +11,9 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+  
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,29 +21,29 @@
   <div class="preview-banner" role="status">Preview, not live</div>
   
   <header class="site-header">
-  <div class="site-header-inner">
-    <a class="wordmark" href="index.html">
-      <span class="wordmark-top">
-        <span class="wordmark-name">Ember & Oak</span>
-        <span class="badge">Placeholder</span>
-
-      </span>
-      <span class="wordmark-suffix">Coffee Co.</span>
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <div class="logo-slot">
+        <picture>
+          <source type="image/avif" srcset="assets/img/logo-mark-128.avif 128w, assets/img/logo-mark-256.avif 256w" sizes="30px">
+          <source type="image/webp" srcset="assets/img/logo-mark-128.webp 128w, assets/img/logo-mark-256.webp 256w" sizes="30px">
+          <img src="assets/img/logo-mark-128.jpg" srcset="assets/img/logo-mark-128.jpg 128w, assets/img/logo-mark-256.jpg 256w" sizes="30px" width="128" height="126" alt="" decoding="async">
+        </picture>
+      </div>
+      <div class="brand-text">
+        <div class="wordmark">Ember <span>&amp;</span> Oak</div>
+        <span class="concept-tag">Concept</span>
+      </div>
     </a>
     <nav class="site-nav" aria-label="Primary">
       <a href="menu.html">Menu</a>
       <a href="events.html" aria-current="page">Events</a>
-      <a href="index.html#hours">Hours</a>
       <a href="index.html#visit">Visit</a>
     </nav>
-    <p class="header-hours" data-hours-status>See hours below</p>
-    
-    <a class="btn btn-primary header-call" href="tel:+19315550100">
-      Call
-      <span class="badge badge-on-dark">Placeholder</span>
-
-    </a>
-    
+    <p class="open-pill" data-hours-status data-open-pill>
+      <i aria-hidden="true"></i>
+      <span data-hours-status-text>See hours</span>
+    </p>
   </div>
 </header>
 
@@ -55,16 +56,45 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:1rem;">
+<section class="section" style="padding-top:1rem;border-top:0;">
   <div class="wrap">
-    <div class="event-list">
+    
+    <article class="friday" style="max-width:40rem;padding:1.2rem 0 1.2rem 1rem;margin-bottom:1.25rem;">
+      <h2 class="section-title" style="font-size:2rem;">Live acoustic music</h2>
+      <p class="event-meta" style="margin:0 0 0.5rem;">
+        <strong>Friday, December 4, 2026</strong>
+         · 6:00 PM – 8:00 PM
+      </p>
+      <p class="order-note">First Friday of each month, in the shop.</p>
+      <p>Live acoustic in the shop. Next first Friday of the month.</p>
+    </article>
+    
+    <div style="max-width:40rem;margin:1.5rem 0;">
       
-      <article class="event-card">
-        <h3>Live acoustic music</h3>
-        <p class="event-meta">First Friday of each month · 6:00 PM – 8:00 PM</p>
-        <p>Live acoustic music at the shop, the first Friday of each month, from 6 to 8 PM.</p>
-      </article>
-      
+
+
+
+
+
+
+
+
+<figure class="photo-figure ">
+  <picture>
+    <source type="image/avif" srcset="assets/img/section-first-fridays-640.avif 640w, assets/img/section-first-fridays-960.avif 960w, assets/img/section-first-fridays-1280.avif 1280w" sizes="(max-width: 800px) 100vw, 40rem">
+    <source type="image/webp" srcset="assets/img/section-first-fridays-640.webp 640w, assets/img/section-first-fridays-960.webp 960w, assets/img/section-first-fridays-1280.webp 1280w" sizes="(max-width: 800px) 100vw, 40rem">
+    <img
+      src="assets/img/section-first-fridays.jpg"
+      srcset="assets/img/section-first-fridays-640.jpg 640w, assets/img/section-first-fridays-960.jpg 960w, assets/img/section-first-fridays-1280.jpg 1280w"
+      sizes="(max-width: 800px) 100vw, 40rem"
+      width="1280"
+      height="720"
+      alt="A generated concept photograph of a small acoustic night in a coffee shop"
+      loading="lazy" decoding="async">
+  </picture>
+  <figcaption class="photo-label">Placeholder image · First Friday in the room</figcaption>
+</figure>
+
     </div>
     <p class="menu-page-actions"><a href="index.html">Back to the homepage</a></p>
   </div>
@@ -74,13 +104,10 @@
   <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <a class="wordmark" href="index.html">
-        <span class="wordmark-top">
-          <span class="wordmark-name">Ember & Oak</span>
-        </span>
-        <span class="wordmark-suffix">Coffee Co.</span>
+      <a class="brand" href="index.html">
+        <div class="wordmark">Ember <span>&amp;</span> Oak</div>
       </a>
-      <p class="muted" style="color:#E6D3B8;margin:1rem 0 0;">
+      <p class="order-note" style="margin-top:1rem;">
         214 Maple Street<br>
         Next to the hardware store<br>
         Clarksville, TN
@@ -153,29 +180,26 @@
     <div>
       <h2 class="footer-heading">Contact</h2>
       <p class="contact-row">
-        <span class="badge badge-on-dark">Placeholder</span>
+        <span class="badge">Placeholder</span>
 
         <a href="tel:+19315550100">(931) 555-0100</a>
       </p>
       <p class="contact-row">
-        <span class="badge badge-on-dark">Placeholder</span>
+        <span class="badge">Placeholder</span>
 
         <a href="mailto:hello@emberandoak.example">hello@emberandoak.example</a>
       </p>
-      <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Get directions</a>
-      </p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Get directions</a></p>
     </div>
   </div>
   
 </footer>
 
   <div class="sticky-bar" role="navigation" aria-label="Quick actions">
-  <a class="btn btn-primary" href="tel:+19315550100">
-    Call <span class="badge badge-on-dark">Placeholder</span>
-
+  <a class="btn btn-ember" href="tel:+19315550100">
+    Call <span class="badge badge-on-ember">Placeholder</span>
   </a>
-  <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Directions</a>
+  <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Directions</a>
 </div>
 
   <script type="application/json" id="hours-data" data-timezone="America/Chicago">
