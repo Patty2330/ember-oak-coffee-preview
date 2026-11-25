@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ember & Oak Coffee Co.</title>
+  <meta name="description" content="Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple Street in Clarksville, TN. Small-batch beans roasted in-house, espresso, pour-overs, tea, and fresh pastries.">
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  
+  <div class="preview-banner" role="status">Preview, not live</div>
+  
+  <header class="site-header">
+  <div class="site-header-inner">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-top">
+        <span class="wordmark-name">Ember & Oak</span>
+        <span class="badge">Placeholder</span>
+
+      </span>
+      <span class="wordmark-suffix">Coffee Co.</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="index.html#hours">Hours</a>
+      <a href="index.html#visit">Visit</a>
+    </nav>
+    <p class="header-hours" data-hours-status>See hours below</p>
+    
+    <a class="btn btn-primary header-call" href="tel:+19315550100">
+      Call
+      <span class="badge badge-on-dark">Placeholder</span>
+
+    </a>
+    
+  </div>
+</header>
+
+  <main id="main">
+    <section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Clarksville, Tennessee</p>
+      <h1 class="hero-headline">Small-batch coffee, roasted here on Maple Street.</h1>
+      <p class="hero-subhead">A neighborhood coffee shop with espresso, pour-overs, loose-leaf tea, and pastries from a local bakery. About 30 seats, free Wi-Fi, and a back room small groups can reserve.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="menu.html">See the menu</a>
+        <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Get directions</a>
+      </div>
+      <p class="hero-today">
+        <span data-hours-label>Hours: Monday–Friday 6:30 AM–6:00 PM, Saturday 7:30 AM–5:00 PM, Sunday 8:00 AM–2:00 PM</span>
+      </p>
+    </div>
+    
+
+
+
+
+<figure class="photo-ph photo-ph-hero">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-hero" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-hero)"/>
+    
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">The shop</p>
+    <p class="photo-ph-caption">A photo of the space will go here. This block is a placeholder, not a stock photo.</p>
+  </figcaption>
+</figure>
+
+  </div>
+</section>
+
+<section class="section-tight" id="hours" aria-labelledby="visit-title">
+  <div class="wrap">
+    <p class="eyebrow">Plan your visit</p>
+    <h2 class="section-title" id="visit-title">Hours, location, and how to find us</h2>
+    <p class="section-lead">Most people come by for a cup, the hours, and a place to sit. Everything you need to drop in is right here.</p>
+    <div class="visit-grid" id="visit">
+      <article class="card">
+        <h3>Hours</h3>
+        <p class="muted" data-hours-status style="margin:0 0 0.35rem;">See today's hours below</p>
+        <p class="muted" style="margin-top:0;">All hours are in Central Time.</p>
+        
+<ol class="hours-list" id="home-hours">
+  
+  <li data-hours-day="1">
+    <span>
+      Monday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="2">
+    <span>
+      Tuesday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="3">
+    <span>
+      Wednesday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="4">
+    <span>
+      Thursday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="5">
+    <span>
+      Friday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="6">
+    <span>
+      Saturday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>7:30 AM–5:00 PM</span>
+  </li>
+  
+  <li data-hours-day="0">
+    <span>
+      Sunday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>8:00 AM–2:00 PM</span>
+  </li>
+  
+</ol>
+
+      </article>
+      <article class="card">
+        <h3>Location</h3>
+        <address class="address-block">
+          <p>214 Maple Street</p>
+          <p>Next to the hardware store</p>
+          <p>Clarksville, TN </p>
+        </address>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Get directions</a>
+      </article>
+      <article class="card">
+        <h3>Contact</h3>
+        <p class="contact-row">
+          <span class="badge">Placeholder</span>
+
+          <a href="tel:+19315550100">(931) 555-0100</a>
+        </p>
+        <p class="contact-row">
+          <span class="badge">Placeholder</span>
+
+          <a href="mailto:hello@emberandoak.example">hello@emberandoak.example</a>
+        </p>
+        <p class="muted" style="margin-bottom:0;">The phone and email above are placeholders until the shop confirms the numbers guests should use.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <p class="eyebrow">What we serve</p>
+    <h2 class="section-title" id="menu-title">Menu highlights</h2>
+    <p class="section-lead">We serve espresso drinks, pour-overs, loose-leaf tea, and fresh pastries from a local bakery. Item names and prices marked Sample are placeholders so you can see how the menu will look. The real names and prices will replace these once the shop sends them.</p>
+    <div class="menu-highlights">
+      
+      <div class="menu-category">
+        <h3>Espresso drinks</h3>
+        <p class="menu-blurb">Espresso drinks made with beans we roast here in small batches.</p>
+        <ul class="menu-items">
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                House espresso
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">A straight shot, or an Americano with hot water.</p>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                Cappuccino
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">Espresso with steamed milk and a thicker foam.</p>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="menu-category">
+        <h3>Pour-overs</h3>
+        <p class="menu-blurb">Single-cup pour-overs, brewed to order.</p>
+        <ul class="menu-items">
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                House roast pour-over
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">Our current house roast, brewed in a single cup.</p>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                Rotating single origin
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">A changing bean, listed on the board in the shop.</p>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="menu-category">
+        <h3>Loose-leaf tea</h3>
+        <p class="menu-blurb">Loose-leaf teas, served by the cup or pot.</p>
+        <ul class="menu-items">
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                Black tea
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">A full-leaf black tea, served hot.</p>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                Green tea
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">A lighter cup, served hot.</p>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="menu-category">
+        <h3>Pastries</h3>
+        <p class="menu-blurb">Fresh pastries from a local bakery, delivered to the shop.</p>
+        <ul class="menu-items">
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                Morning pastry
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">A rotating pastry from the bakery case.</p>
+          </li>
+          
+          <li class="menu-item">
+            <div class="menu-item-row">
+              <span class="menu-item-name">
+                Sweet bite
+                <span class="badge">Sample</span>
+
+              </span>
+              <span class="menu-dots" aria-hidden="true"></span>
+              <span class="menu-price">
+                —
+                <span class="badge">Placeholder</span>
+
+              </span>
+            </div>
+            <p class="menu-desc">A cookie or similar treat from the case.</p>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+    <p class="menu-page-actions">
+      <a class="btn btn-primary" href="menu.html">See the full menu</a>
+    </p>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title" style="padding-top:0;">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">The shop</p>
+      <h2 class="section-title" id="about-title">A neighborhood shop, roasted in-house</h2>
+      <p>Ember & Oak Coffee Co. opened last spring at 214 Maple Street, next to the hardware store. We roast our own beans in small batches and serve espresso drinks, pour-overs, loose-leaf tea, and fresh pastries from a local bakery. There are about 30 seats, free Wi-Fi, and a back room that small groups can reserve.</p>
+      <ul class="facts">
+        <li>About 30 seats</li>
+        <li>Free Wi-Fi</li>
+        <li>Back room for small groups</li>
+        <li>Roasted in-house</li>
+        <li>Opened last spring</li>
+      </ul>
+    </div>
+    
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-about" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-about)"/>
+    
+    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF6EE" stroke-width="3" opacity="0.4"/>
+    <line x1="70" y1="200" x2="330" y2="200" stroke="#8C5A3C" stroke-width="2" opacity="0.3"/>
+    <rect x="100" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    <rect x="200" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">Inside the shop</p>
+    <p class="photo-ph-caption">A photo of the seating and counter will go here.</p>
+  </figcaption>
+</figure>
+
+  </div>
+</section>
+
+<section class="section" id="gallery" aria-labelledby="gallery-title" style="padding-top:0;">
+  <div class="wrap">
+    <p class="eyebrow">Photos</p>
+    <h2 class="section-title" id="gallery-title">A look at the space</h2>
+    <p class="section-lead">The shop has photos and a logo to send. Until they arrive, these labeled blocks mark where pictures will go. They are not photos of another business.</p>
+    <div class="gallery-grid">
+      
+        
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-1)"/>
+    
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">The shop</p>
+    <p class="photo-ph-caption">A photo of the shop will go here.</p>
+  </figcaption>
+</figure>
+
+      
+        
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-2)"/>
+    
+    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#6B2A24" opacity="0.18"/>
+    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.45"/>
+    <circle cx="140" cy="170" r="14" fill="#6B2A24" opacity="0.3"/>
+    <circle cx="250" cy="150" r="10" fill="#6B2A24" opacity="0.25"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">Roasting</p>
+    <p class="photo-ph-caption">A photo of the in-house roast will go here.</p>
+  </figcaption>
+</figure>
+
+      
+        
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-3" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-3)"/>
+    
+    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF6EE" stroke-width="3" opacity="0.4"/>
+    <line x1="70" y1="200" x2="330" y2="200" stroke="#8C5A3C" stroke-width="2" opacity="0.3"/>
+    <rect x="100" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    <rect x="200" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">Seating</p>
+    <p class="photo-ph-caption">A photo of the dining room (about 30 seats) will go here.</p>
+  </figcaption>
+</figure>
+
+      
+        
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-4" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-4)"/>
+    
+    <path d="M200 90 L230 170 L200 250 L170 170 Z" fill="#6B2A24" opacity="0.22"/>
+    <circle cx="200" cy="310" r="48" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.4"/>
+    <circle cx="200" cy="310" r="18" fill="#8C5A3C" opacity="0.35"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">Pastries</p>
+    <p class="photo-ph-caption">A photo of pastries from the local bakery will go here.</p>
+  </figcaption>
+</figure>
+
+      
+        
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-5" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-5)"/>
+    
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">The back room</p>
+    <p class="photo-ph-caption">A photo of the reservable back room will go here.</p>
+  </figcaption>
+</figure>
+
+      
+        
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-6" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-6)"/>
+    
+    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#6B2A24" opacity="0.18"/>
+    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.45"/>
+    <circle cx="140" cy="170" r="14" fill="#6B2A24" opacity="0.3"/>
+    <circle cx="250" cy="150" r="10" fill="#6B2A24" opacity="0.25"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">Maple Street</p>
+    <p class="photo-ph-caption">A photo of the shop on Maple Street will go here.</p>
+  </figcaption>
+</figure>
+
+      
+    </div>
+  </div>
+</section>
+
+<section class="section" id="events" aria-labelledby="events-title" style="padding-top:0;">
+  <div class="wrap">
+    <p class="eyebrow">What's on</p>
+    <h2 class="section-title" id="events-title">Events</h2>
+    <p class="section-lead">A simple place to post what's coming up at the shop. The monthly music night below is from the shop; more events can be added here anytime.</p>
+    <div class="event-list">
+      
+      <article class="event-card">
+        <h3>Live acoustic music</h3>
+        <p class="event-meta">First Friday of each month · 6:00 PM – 8:00 PM</p>
+        <p>Live acoustic music at the shop, the first Friday of each month, from 6 to 8 PM.</p>
+      </article>
+      
+    </div>
+    <p class="menu-page-actions"><a href="events.html">See all events</a></p>
+  </div>
+</section>
+
+
+<section class="band" id="back-room" aria-labelledby="room-title">
+  <div class="wrap">
+    <h2 class="section-title" id="room-title">Reserve the back room</h2>
+    <p>A back room is available for small groups to reserve. Call or email to ask about a time (contact details below are placeholders until the shop confirms them).</p>
+    <a class="btn btn-on-dark" href="tel:+19315550100">
+      Call about the back room
+      <span class="badge badge-on-dark">Placeholder</span>
+
+    </a>
+  </div>
+</section>
+
+
+<section class="section" id="parking" aria-labelledby="parking-title">
+  <div class="wrap">
+    <p class="eyebrow">Getting here</p>
+    <h2 class="section-title" id="parking-title">Map and parking</h2>
+    <div class="map-panel">
+      <div>
+        <p>
+          <span class="badge">Placeholder</span>
+
+          Parking details will be added once we confirm where guests should park.
+        </p>
+        <p>
+          <strong>214 Maple Street</strong><br>
+          Next to the hardware store<br>
+          Clarksville, TN
+        </p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Open in Google Maps</a>
+      </div>
+      <div class="map-placeholder">
+        <span class="badge">Placeholder</span>
+
+        <p class="photo-ph-label" style="color:var(--color-primary);font-size:1.5rem;">Map</p>
+        <p class="muted" style="margin:0;">A map pin will go here once the address is confirmed. Use the directions button for a Google Maps search of 214 Maple Street, Clarksville, TN.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-top">
+          <span class="wordmark-name">Ember & Oak</span>
+        </span>
+        <span class="wordmark-suffix">Coffee Co.</span>
+      </a>
+      <p class="muted" style="color:#E6D3B8;margin:1rem 0 0;">
+        214 Maple Street<br>
+        Next to the hardware store<br>
+        Clarksville, TN
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Hours</h2>
+      
+<ol class="hours-list" id="footer-hours">
+  
+  <li data-hours-day="1">
+    <span>
+      Monday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="2">
+    <span>
+      Tuesday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="3">
+    <span>
+      Wednesday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="4">
+    <span>
+      Thursday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="5">
+    <span>
+      Friday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>6:30 AM–6:00 PM</span>
+  </li>
+  
+  <li data-hours-day="6">
+    <span>
+      Saturday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>7:30 AM–5:00 PM</span>
+  </li>
+  
+  <li data-hours-day="0">
+    <span>
+      Sunday
+      <span class="hours-today-tag" hidden>Today</span>
+    </span>
+    <span>8:00 AM–2:00 PM</span>
+  </li>
+  
+</ol>
+
+    </div>
+    <div>
+      <h2 class="footer-heading">Contact</h2>
+      <p class="contact-row">
+        <span class="badge badge-on-dark">Placeholder</span>
+
+        <a href="tel:+19315550100">(931) 555-0100</a>
+      </p>
+      <p class="contact-row">
+        <span class="badge badge-on-dark">Placeholder</span>
+
+        <a href="mailto:hello@emberandoak.example">hello@emberandoak.example</a>
+      </p>
+      <p>
+        <a href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Get directions</a>
+      </p>
+    </div>
+  </div>
+  
+</footer>
+
+  <div class="sticky-bar" role="navigation" aria-label="Quick actions">
+  <a class="btn btn-primary" href="tel:+19315550100">
+    Call <span class="badge badge-on-dark">Placeholder</span>
+
+  </a>
+  <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Directions</a>
+</div>
+
+  <script type="application/json" id="hours-data" data-timezone="America/Chicago">
+[
+
+  {
+    "day": "Monday",
+    "js_day": 1,
+    "open": "6:30 AM",
+    "close": "6:00 PM",
+    "open_24h": "06:30",
+    "close_24h": "18:00"
+  },
+
+  {
+    "day": "Tuesday",
+    "js_day": 2,
+    "open": "6:30 AM",
+    "close": "6:00 PM",
+    "open_24h": "06:30",
+    "close_24h": "18:00"
+  },
+
+  {
+    "day": "Wednesday",
+    "js_day": 3,
+    "open": "6:30 AM",
+    "close": "6:00 PM",
+    "open_24h": "06:30",
+    "close_24h": "18:00"
+  },
+
+  {
+    "day": "Thursday",
+    "js_day": 4,
+    "open": "6:30 AM",
+    "close": "6:00 PM",
+    "open_24h": "06:30",
+    "close_24h": "18:00"
+  },
+
+  {
+    "day": "Friday",
+    "js_day": 5,
+    "open": "6:30 AM",
+    "close": "6:00 PM",
+    "open_24h": "06:30",
+    "close_24h": "18:00"
+  },
+
+  {
+    "day": "Saturday",
+    "js_day": 6,
+    "open": "7:30 AM",
+    "close": "5:00 PM",
+    "open_24h": "07:30",
+    "close_24h": "17:00"
+  },
+
+  {
+    "day": "Sunday",
+    "js_day": 0,
+    "open": "8:00 AM",
+    "close": "2:00 PM",
+    "open_24h": "08:00",
+    "close_24h": "14:00"
+  }
+
+]
+</script>
+
+  <script src="assets/js/hours.js" defer></script>
+</body>
+</html>
