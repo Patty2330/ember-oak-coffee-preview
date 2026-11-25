@@ -1,0 +1,6 @@
+<div class="sticky-bar" role="navigation" aria-label="Quick actions">
+  <a class="btn btn-primary" href="{{ site.data.site.phone_href }}">
+    Call{% if site.data.site.phone_is_placeholder %} {% include badge.html label="Placeholder" class="badge-on-dark" %}{% endif %}
+  </a>
+  <a class="btn btn-secondary" href="{{ site.data.site.maps_url }}">Directions</a>
+</div>

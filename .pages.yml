@@ -1,0 +1,258 @@
+# Pages CMS configuration.
+# Lets the shop (or an editor) change hours, the menu, and events without editing templates.
+# https://pagescms.org/docs/configuration
+
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: site
+    label: Business info and hours
+    type: file
+    path: _data/site.yml
+    format: yaml
+    fields:
+      - name: preview
+        label: Show "Preview, not live" banner
+        type: boolean
+      - name: preview_banner
+        label: Banner text
+        type: string
+      - name: name
+        label: Business name
+        type: string
+        required: true
+      - name: short_name
+        label: Short name
+        type: string
+      - name: wordmark_line1
+        label: Wordmark, first line
+        type: string
+      - name: wordmark_line2
+        label: Wordmark, second line
+        type: string
+      - name: logo_is_placeholder
+        label: Logo is still a placeholder
+        type: boolean
+      - name: city
+        label: City
+        type: string
+        required: true
+      - name: state
+        label: State abbreviation
+        type: string
+      - name: state_full
+        label: State name
+        type: string
+      - name: street_address
+        label: Street address
+        type: string
+        required: true
+      - name: address_note
+        label: Address note
+        type: string
+      - name: postal_code
+        label: Postal code
+        type: string
+      - name: maps_query
+        label: Google Maps search text
+        type: string
+      - name: maps_url
+        label: Google Maps URL
+        type: string
+      - name: phone
+        label: Phone (shown on the site)
+        type: string
+      - name: phone_href
+        label: Phone link (tel:)
+        type: string
+      - name: phone_is_placeholder
+        label: Phone is still a placeholder
+        type: boolean
+      - name: email
+        label: Email (shown on the site)
+        type: string
+      - name: email_href
+        label: Email link (mailto:)
+        type: string
+      - name: email_is_placeholder
+        label: Email is still a placeholder
+        type: boolean
+      - name: parking
+        label: Parking notes
+        type: text
+      - name: parking_is_placeholder
+        label: Parking is still a placeholder
+        type: boolean
+      - name: footer_credit
+        label: Footer credit (leave empty to hide)
+        type: string
+      - name: opened
+        label: When the shop opened (short phrase)
+        type: string
+      - name: seats
+        label: Number of seats
+        type: number
+      - name: wifi
+        label: Free Wi-Fi
+        type: boolean
+      - name: back_room
+        label: Back room available
+        type: boolean
+      - name: back_room_blurb
+        label: Back room description
+        type: text
+      - name: timezone
+        label: Timezone
+        type: string
+      - name: hero
+        label: Homepage hero
+        type: object
+        fields:
+          - name: eyebrow
+            type: string
+          - name: headline
+            type: string
+          - name: subhead
+            type: text
+          - name: cta_primary
+            type: string
+          - name: cta_primary_href
+            type: string
+          - name: cta_secondary
+            type: string
+      - name: about_title
+        label: About heading
+        type: string
+      - name: about
+        label: About the shop
+        type: text
+      - name: hours
+        label: Hours
+        type: object
+        list:
+          collapsible:
+            collapsed: false
+            summary: "{day} {open}–{close}"
+        fields:
+          - name: day
+            label: Day
+            type: string
+            required: true
+          - name: js_day
+            label: Day number (Sunday is 0)
+            type: number
+            required: true
+          - name: open
+            label: Opens
+            type: string
+            required: true
+          - name: close
+            label: Closes
+            type: string
+            required: true
+          - name: open_24h
+            label: Opens (24-hour, HH:MM)
+            type: string
+            required: true
+          - name: close_24h
+            label: Closes (24-hour, HH:MM)
+            type: string
+            required: true
+      - name: gallery
+        label: Photo placeholders
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            type: string
+          - name: variant
+            label: Placeholder art variant (a, b, c, or d)
+            type: string
+          - name: caption
+            type: string
+
+  - name: menu
+    label: Menu
+    type: file
+    path: _data/menu.yml
+    format: yaml
+    fields:
+      - name: intro
+        label: Menu introduction
+        type: text
+      - name: categories
+        label: Categories
+        type: object
+        list:
+          collapsible:
+            collapsed: false
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Category name
+            type: string
+            required: true
+          - name: blurb
+            label: Category note
+            type: text
+          - name: items
+            label: Items
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Item name
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+              - name: price
+                label: Price
+                type: string
+              - name: sample
+                label: This is a sample item (not from the real menu yet)
+                type: boolean
+
+  - name: events
+    label: Events
+    type: file
+    path: _data/events.yml
+    format: yaml
+    fields:
+      - name: intro
+        label: Events introduction
+        type: text
+      - name: events
+        label: Events
+        type: object
+        list:
+          collapsible:
+            collapsed: false
+            summary: "{title} — {date_label}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: date_label
+            label: Date
+            type: string
+            required: true
+          - name: time_label
+            label: Time
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: recurring
+            label: Recurring event
+            type: boolean

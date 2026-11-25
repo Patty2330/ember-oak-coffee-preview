@@ -1,0 +1,70 @@
+# Menu categories and items.
+# Category names come from the shop. Item names and prices marked sample: true
+# are placeholders until the real menu arrives.
+
+intro: >-
+  We serve espresso drinks, pour-overs, loose-leaf tea, and fresh pastries from a local bakery.
+  Item names and prices marked Sample are placeholders so you can see how the menu will look.
+  The real names and prices will replace these once the shop sends them.
+
+categories:
+  - name: Espresso drinks
+    blurb: Espresso drinks made with beans we roast here in small batches.
+    items:
+      - name: House espresso
+        description: A straight shot, or an Americano with hot water.
+        price: "—"
+        sample: true
+      - name: Cappuccino
+        description: Espresso with steamed milk and a thicker foam.
+        price: "—"
+        sample: true
+      - name: Latte
+        description: Espresso and steamed milk, served hot or over ice.
+        price: "—"
+        sample: true
+      - name: Mocha
+        description: Espresso, chocolate, and steamed milk.
+        price: "—"
+        sample: true
+  - name: Pour-overs
+    blurb: Single-cup pour-overs, brewed to order.
+    items:
+      - name: House roast pour-over
+        description: Our current house roast, brewed in a single cup.
+        price: "—"
+        sample: true
+      - name: Rotating single origin
+        description: A changing bean, listed on the board in the shop.
+        price: "—"
+        sample: true
+  - name: Loose-leaf tea
+    blurb: Loose-leaf teas, served by the cup or pot.
+    items:
+      - name: Black tea
+        description: A full-leaf black tea, served hot.
+        price: "—"
+        sample: true
+      - name: Green tea
+        description: A lighter cup, served hot.
+        price: "—"
+        sample: true
+      - name: Herbal tea
+        description: A caffeine-free option from the tea list.
+        price: "—"
+        sample: true
+  - name: Pastries
+    blurb: Fresh pastries from a local bakery, delivered to the shop.
+    items:
+      - name: Morning pastry
+        description: A rotating pastry from the bakery case.
+        price: "—"
+        sample: true
+      - name: Sweet bite
+        description: A cookie or similar treat from the case.
+        price: "—"
+        sample: true
+      - name: Savory pastry
+        description: A savory option when the bakery has one in.
+        price: "—"
+        sample: true

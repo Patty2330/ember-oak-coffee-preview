@@ -1,0 +1,42 @@
+{% assign ph_label = include.label | default: "Photo" %}
+{% assign ph_caption = include.caption | default: "A shop photo will go here." %}
+{% assign ph_class = include.class | default: "" %}
+{% assign ph_variant = include.variant | default: "a" %}
+{% assign ph_uid = include.uid | default: ph_variant %}
+<figure class="photo-ph {{ ph_class }}">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-{{ ph_uid }}" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="url(#glow-{{ ph_uid }})"/>
+    {% if ph_variant == "a" %}
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    {% elsif ph_variant == "b" %}
+    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#6B2A24" opacity="0.18"/>
+    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.45"/>
+    <circle cx="140" cy="170" r="14" fill="#6B2A24" opacity="0.3"/>
+    <circle cx="250" cy="150" r="10" fill="#6B2A24" opacity="0.25"/>
+    {% elsif ph_variant == "c" %}
+    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF6EE" stroke-width="3" opacity="0.4"/>
+    <line x1="70" y1="200" x2="330" y2="200" stroke="#8C5A3C" stroke-width="2" opacity="0.3"/>
+    <rect x="100" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    <rect x="200" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    {% else %}
+    <path d="M200 90 L230 170 L200 250 L170 170 Z" fill="#6B2A24" opacity="0.22"/>
+    <circle cx="200" cy="310" r="48" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.4"/>
+    <circle cx="200" cy="310" r="18" fill="#8C5A3C" opacity="0.35"/>
+    {% endif %}
+  </svg>
+  <figcaption class="photo-ph-meta">
+    {% include badge.html label="Placeholder" class="badge-on-dark" %}
+    <p class="photo-ph-label">{{ ph_label }}</p>
+    <p class="photo-ph-caption">{{ ph_caption }}</p>
+  </figcaption>
+</figure>

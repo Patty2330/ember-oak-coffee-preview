@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-top">
+        <span class="wordmark-name">{{ site.data.site.wordmark_line1 }}</span>
+        {% if site.data.site.logo_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+      </span>
+      <span class="wordmark-suffix">{{ site.data.site.wordmark_line2 }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="menu.html"{% if page.url contains "menu" %} aria-current="page"{% endif %}>Menu</a>
+      <a href="events.html"{% if page.url contains "events" %} aria-current="page"{% endif %}>Events</a>
+      <a href="index.html#hours">Hours</a>
+      <a href="index.html#visit">Visit</a>
+    </nav>
+    <p class="header-hours" data-hours-status>See hours below</p>
+    {% if site.data.site.phone_href %}
+    <a class="btn btn-primary header-call" href="{{ site.data.site.phone_href }}">
+      Call
+      {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" class="badge-on-dark" %}{% endif %}
+    </a>
+    {% endif %}
+  </div>
+</header>

@@ -1,0 +1,14 @@
+<script type="application/json" id="hours-data" data-timezone="{{ site.data.site.timezone | default: 'America/Chicago' }}">
+[
+{% for h in site.data.site.hours %}
+  {
+    "day": {{ h.day | jsonify }},
+    "js_day": {{ h.js_day }},
+    "open": {{ h.open | jsonify }},
+    "close": {{ h.close | jsonify }},
+    "open_24h": {{ h.open_24h | jsonify }},
+    "close_24h": {{ h.close_24h | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+</script>

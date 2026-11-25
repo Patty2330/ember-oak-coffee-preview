@@ -1,0 +1,28 @@
+---
+layout: default
+title: Events
+permalink: /events.html
+description: What's on at Ember & Oak Coffee Co., including live acoustic music on the first Friday of each month.
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Ember &amp; Oak Coffee Co.</p>
+    <h1 class="section-title">Events</h1>
+    <p class="section-lead">{{ site.data.events.intro }}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem;">
+  <div class="wrap">
+    <div class="event-list">
+      {% for event in site.data.events.events %}
+      <article class="event-card">
+        <h3>{{ event.title }}</h3>
+        <p class="event-meta">{{ event.date_label }}{% if event.time_label %} · {{ event.time_label }}{% endif %}</p>
+        <p>{{ event.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="menu-page-actions"><a href="index.html">Back to the homepage</a></p>
+  </div>
+</section>

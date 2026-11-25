@@ -1,0 +1,14 @@
+# Events the shop can post and update.
+# Add or edit items here (or in Pages CMS). Do not invent events that were not provided.
+
+intro: >-
+  A simple place to post what's coming up at the shop. The monthly music night
+  below is from the shop; more events can be added here anytime.
+
+events:
+  - title: Live acoustic music
+    date_label: "First Friday of each month"
+    time_label: "6:00 PM – 8:00 PM"
+    description: >-
+      Live acoustic music at the shop, the first Friday of each month, from 6 to 8 PM.
+    recurring: true

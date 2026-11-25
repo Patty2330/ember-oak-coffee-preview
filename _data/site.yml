@@ -1,0 +1,127 @@
+# Business information and hours.
+# Edit this file (or use Pages CMS) to change name, city, hours, contact, and hero copy.
+# Fields marked is_placeholder: true must stay clearly labeled on the site until real values arrive.
+
+preview: true
+preview_banner: "Preview, not live"
+robots: "noindex, nofollow"
+
+name: "Ember & Oak Coffee Co."
+short_name: "Ember & Oak"
+wordmark_line1: "Ember & Oak"
+wordmark_line2: "Coffee Co."
+# No logo file yet — the site uses this text wordmark.
+logo_is_placeholder: true
+
+# City is assumed Clarksville, TN (local market) and kept here so it can be corrected in one place.
+city: "Clarksville"
+state: "TN"
+state_full: "Tennessee"
+street_address: "214 Maple Street"
+address_note: "Next to the hardware store"
+postal_code: ""
+country: "US"
+maps_query: "214 Maple Street, Clarksville, TN"
+maps_url: "https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN"
+
+# Placeholder contact info — not a real shop number or inbox.
+phone: "(931) 555-0100"
+phone_href: "tel:+19315550100"
+phone_is_placeholder: true
+email: "hello@emberandoak.example"
+email_href: "mailto:hello@emberandoak.example"
+email_is_placeholder: true
+
+parking: "Parking details will be added once we confirm where guests should park."
+parking_is_placeholder: true
+
+# Leave empty to keep agency branding off the site.
+footer_credit: ""
+
+opened: "last spring"
+seats: 30
+wifi: true
+back_room: true
+back_room_blurb: "A back room is available for small groups to reserve. Call or email to ask about a time (contact details below are placeholders until the shop confirms them)."
+
+timezone: "America/Chicago"
+
+hero:
+  eyebrow: "Clarksville, Tennessee"
+  headline: "Small-batch coffee, roasted here on Maple Street."
+  subhead: "A neighborhood coffee shop with espresso, pour-overs, loose-leaf tea, and pastries from a local bakery. About 30 seats, free Wi-Fi, and a back room small groups can reserve."
+  cta_primary: "See the menu"
+  cta_primary_href: "menu.html"
+  cta_secondary: "Get directions"
+
+about_title: "A neighborhood shop, roasted in-house"
+about: >-
+  Ember & Oak Coffee Co. opened last spring at 214 Maple Street, next to the hardware store.
+  We roast our own beans in small batches and serve espresso drinks, pour-overs, loose-leaf tea,
+  and fresh pastries from a local bakery. There are about 30 seats, free Wi-Fi, and a back room
+  that small groups can reserve.
+
+hours:
+  - day: Monday
+    js_day: 1
+    open: "6:30 AM"
+    close: "6:00 PM"
+    open_24h: "06:30"
+    close_24h: "18:00"
+  - day: Tuesday
+    js_day: 2
+    open: "6:30 AM"
+    close: "6:00 PM"
+    open_24h: "06:30"
+    close_24h: "18:00"
+  - day: Wednesday
+    js_day: 3
+    open: "6:30 AM"
+    close: "6:00 PM"
+    open_24h: "06:30"
+    close_24h: "18:00"
+  - day: Thursday
+    js_day: 4
+    open: "6:30 AM"
+    close: "6:00 PM"
+    open_24h: "06:30"
+    close_24h: "18:00"
+  - day: Friday
+    js_day: 5
+    open: "6:30 AM"
+    close: "6:00 PM"
+    open_24h: "06:30"
+    close_24h: "18:00"
+  - day: Saturday
+    js_day: 6
+    open: "7:30 AM"
+    close: "5:00 PM"
+    open_24h: "07:30"
+    close_24h: "17:00"
+  - day: Sunday
+    js_day: 0
+    open: "8:00 AM"
+    close: "2:00 PM"
+    open_24h: "08:00"
+    close_24h: "14:00"
+
+# Labeled photo slots — not pictures of other businesses.
+gallery:
+  - label: "The shop"
+    variant: "a"
+    caption: "A photo of the shop will go here."
+  - label: "Roasting"
+    variant: "b"
+    caption: "A photo of the in-house roast will go here."
+  - label: "Seating"
+    variant: "c"
+    caption: "A photo of the dining room (about 30 seats) will go here."
+  - label: "Pastries"
+    variant: "d"
+    caption: "A photo of pastries from the local bakery will go here."
+  - label: "The back room"
+    variant: "a"
+    caption: "A photo of the reservable back room will go here."
+  - label: "Maple Street"
+    variant: "b"
+    caption: "A photo of the shop on Maple Street will go here."
