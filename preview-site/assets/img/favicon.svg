@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Ember & Oak">
-  <rect width="32" height="32" rx="3" fill="#6B2A24"/>
-  <text x="16" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#FBF6EE">E&amp;O</text>
+  <rect width="32" height="32" rx="4" fill="#0B0908"/>
+  <circle cx="16" cy="16" r="7" fill="#FF6A21"/>
+  <circle cx="16" cy="16" r="3" fill="#140806"/>
 </svg>

@@ -2,7 +2,12 @@
 
 Private website preview for Ember & Oak Coffee Co., a neighborhood coffee shop at 214 Maple Street in Clarksville, TN. This repository must stay private. Do not enable GitHub Pages, do not deploy this anywhere public, and do not contact the client unless Jalen says so in his own words.
 
-The visual system uses the **restaurant / cafe** preset (`Table & Porch` in the style library: cream, burgundy, and brass; Cormorant Garamond and Outfit). There is no separate coffee-shop preset; Restaurant / cafe maps to that one.
+The current visual system is **Live Coal** (chosen by Jalen on 25 November 2026): charcoal `#0B0908`, cream text `#F3E6D0`, ember CTA `#FF6A21` with dark type `#140806`. Display type is **Instrument Serif**; UI, hours, and buttons are **IBM Plex Mono**. Concept photographs and the circular mark are Creative-generated placeholders, labeled on the page, until Sandy sends real assets.
+
+Earlier directions:
+
+- `preview/initial` (PR #1) — first preview, Table & Porch restaurant preset
+- `design/ember-glow` (PR #2) — Ember Glow alternate, left untouched after Live Coal was chosen
 
 ## View the preview privately
 
@@ -12,11 +17,23 @@ The built site is in `preview-site/`. It is plain HTML and CSS, with relative li
 2. Open `preview-site/index.html` in a browser (double-click the file, or use File → Open).
 3. Optional, if you want a local server: from the `preview-site` folder run `python3 -m http.server 8080` and visit `http://localhost:8080`.
 
-Screenshots (phone and desktop) are in `screenshots-shared/`.
+Screenshots are in `screenshots-shared/`, including `phone-live-coal.png` and `desktop-live-coal.png`.
+
+## Contrast (WCAG 2.2 AA)
+
+Checked 25 November 2026, America/Chicago, from sRGB relative luminance:
+
+| Pair | Ratio | AA normal |
+| --- | --- | --- |
+| `#F3E6D0` on `#0B0908` (body) | 16.12 | Pass |
+| `#CDB89A` on `#0B0908` (muted) | 10.33 | Pass |
+| `#140806` on `#FF6A21` (CTA label) | 6.87 | Pass |
+| `#FF6A21` on `#0B0908` (open pill) | 6.94 | Pass |
+| `#F3E6D0` on `#120E0C` (text on panels) | 15.58 | Pass |
+| `#FFFFFF` on `#FF6A21` | 2.86 | **Fail** — do not use white on the ember button |
+| `#C43A0E` on `#0B0908` (deep ember) | 3.75 | Large marks only |
 
 ## Edit hours, the menu, and events
-
-The owner-facing content lives in data files, which Pages CMS can also edit (see `.pages.yml`):
 
 | File | What it controls |
 | --- | --- |
@@ -24,26 +41,18 @@ The owner-facing content lives in data files, which Pages CMS can also edit (see
 | `_data/menu.yml` | Menu categories and items |
 | `_data/events.yml` | Events list |
 
-After you change those files, rebuild:
-
-```bash
-./scripts/build.sh
-```
-
-That refreshes `preview-site/` and `ember-oak-preview-site.zip`. You need Jekyll 3.10+ on your PATH (see the Gemfile).
+`.pages.yml` is set up for Pages CMS. After you change those files, rebuild with `./scripts/build.sh`.
 
 ## Placeholders
 
-Anything the shop has not sent yet is marked on the page with a dashed **Placeholder** or **Sample** badge:
-
-- Logo (text wordmark until a logo file arrives)
-- Photos of the shop (tasteful placeholder blocks, not stock photos)
+- Logo: concept mark, labeled **Concept** (not a final mark)
+- Photos: generated concept images, labeled **Placeholder image**
 - Menu item names and prices (categories are real; items are labeled Sample)
 - Shop phone and email
 - Parking details
 
-The top banner says **Preview, not live**.
+The top banner says **Preview, not live**. Pages are set to `noindex`.
 
 ## Branching
 
-Work on a branch and open a pull request into `main`. Do not push to `main`. See `AGENTS.md`.
+Work on a branch and open a pull request. Do not push to `main`. See `AGENTS.md`.

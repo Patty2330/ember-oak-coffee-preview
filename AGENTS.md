@@ -16,3 +16,5 @@ This is a private preview site for a prospective client, Ember & Oak Coffee Co. 
 Add a permanent rule here every time Jalen corrects something.
 
 - 2026-11-25 (Jalen, via Web Chief): For every client site, Creative must first research and compare top sites in that industry and make or update a matching preset before any build work starts. Don't start or continue building until that comparison and preset exist.
+
+- 2026-11-25 (Jalen): Jalen picks the final design after seeing Creative's visual directions; don't build a direction until he has chosen it.

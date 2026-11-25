@@ -6,67 +6,70 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
 ---
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <p class="eyebrow">{{ site.data.site.hero.eyebrow }}</p>
-      <h1 class="hero-headline">{{ site.data.site.hero.headline }}</h1>
-      <p class="hero-subhead">{{ site.data.site.hero.subhead }}</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ site.data.site.hero.cta_primary_href }}">{{ site.data.site.hero.cta_primary }}</a>
-        <a class="btn btn-secondary" href="{{ site.data.site.maps_url }}">{{ site.data.site.hero.cta_secondary }}</a>
+      <h1 class="hero-headline">{{ site.data.site.hero.headline_line1 }}<br>{{ site.data.site.hero.headline_line2 }}<em>.</em></h1>
+      <p class="sub">{{ site.data.site.hero.subhead }}</p>
+      <div class="actions">
+        <a class="btn btn-ember" href="{{ site.data.site.hero.cta_primary_href }}">{{ site.data.site.hero.cta_primary }}</a>
+        <a class="btn btn-ghost" href="{{ site.data.site.maps_url }}">{{ site.data.site.hero.cta_secondary }}</a>
       </div>
-      <p class="hero-today">
-        <span data-hours-label>Hours: Monday–Friday 6:30 AM–6:00 PM, Saturday 7:30 AM–5:00 PM, Sunday 8:00 AM–2:00 PM</span>
-      </p>
+      <p class="hours-line"><strong data-hours-line-strong>Hours</strong> · Mon–Fri 6:30 AM–6:00 PM</p>
     </div>
-    {% include photo-placeholder.html
-       class="photo-ph-hero"
-       variant="a"
-       uid="hero"
-       label="The shop"
-       caption="A photo of the space will go here. This block is a placeholder, not a stock photo." %}
+    <div class="coal-stage">
+      <div class="glow"></div>
+      {% include picture.html
+         name="hero-glowing-coals"
+         alt="Glowing coals in a bed of charcoal, a generated concept photograph"
+         widths="640,960,1280"
+         sizes="(max-width: 800px) 100vw, 50vw"
+         width=1280
+         height=720
+         loading_mode="eager"
+         label="Placeholder image · The roast, still glowing" %}
+      <div class="sparks">
+        <i class="spark" style="left:30%;bottom:18%;animation-delay:0s"></i>
+        <i class="spark" style="left:46%;bottom:22%;animation-delay:1.2s"></i>
+        <i class="spark" style="left:62%;bottom:16%;animation-delay:2.1s;width:2px;height:2px"></i>
+        <i class="spark" style="left:54%;bottom:28%;animation-delay:3s"></i>
+        <i class="spark" style="left:38%;bottom:12%;animation-delay:4s;width:2px;height:2px"></i>
+        <i class="spark" style="left:70%;bottom:20%;animation-delay:0.7s"></i>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section-tight" id="hours" aria-labelledby="visit-title">
-  <div class="wrap">
-    <p class="eyebrow">Plan your visit</p>
-    <h2 class="section-title" id="visit-title">Hours, location, and how to find us</h2>
-    <p class="section-lead">Most people come by for a cup, the hours, and a place to sit. Everything you need to drop in is right here.</p>
-    <div class="visit-grid" id="visit">
-      <article class="card">
-        <h3>Hours</h3>
-        <p class="muted" data-hours-status style="margin:0 0 0.35rem;">See today's hours below</p>
-        <p class="muted" style="margin-top:0;">All hours are in Central Time.</p>
-        {% include hours-list.html id="home-hours" %}
-      </article>
-      <article class="card">
-        <h3>Location</h3>
-        <address class="address-block">
-          <p>{{ site.data.site.street_address }}</p>
-          {% if site.data.site.address_note %}<p>{{ site.data.site.address_note }}</p>{% endif %}
-          <p>{{ site.data.site.city }}, {{ site.data.site.state }}{% if site.data.site.postal_code %} {{ site.data.site.postal_code }}{% endif %}</p>
-        </address>
-        <a class="btn btn-primary" href="{{ site.data.site.maps_url }}">Get directions</a>
-      </article>
-      <article class="card">
-        <h3>Contact</h3>
-        <p class="contact-row">
-          {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
-          <a href="{{ site.data.site.phone_href }}">{{ site.data.site.phone }}</a>
-        </p>
-        <p class="contact-row">
-          {% if site.data.site.email_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
-          <a href="{{ site.data.site.email_href }}">{{ site.data.site.email }}</a>
-        </p>
-        <p class="muted" style="margin-bottom:0;">The phone and email above are placeholders until the shop confirms the numbers guests should use.</p>
-      </article>
+<section class="visit" id="visit" aria-labelledby="hours-heading">
+  <div class="wrap visit-grid">
+    <div>
+      <h2 id="hours-heading">Hours</h2>
+      <p>Mon–Fri 6:30 AM–6:00 PM<br>Saturday 7:30 AM–5:00 PM<br>Sunday 8:00 AM–2:00 PM</p>
+      <p class="order-note">{{ site.data.site.order_note }} All hours are in Central Time.</p>
+    </div>
+    <div>
+      <h2>Visit</h2>
+      <address>
+        {{ site.data.site.street_address }}<br>
+        {{ site.data.site.city }}, {{ site.data.site.state }}<br>
+        About {{ site.data.site.seats }} seats · Free Wi-Fi
+      </address>
+      <p class="parking-note">
+        {% if site.data.site.parking_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+        {{ site.data.site.parking }}
+      </p>
+    </div>
+    <div class="friday" id="events">
+      <h2>First Fridays</h2>
+      {% assign event = site.data.events.events | first %}
+      <strong>{{ event.next_date_short | default: event.next_date }}</strong>
+      <p>{{ event.description }}</p>
     </div>
   </div>
 </section>
 
 <section class="section" id="menu" aria-labelledby="menu-title">
   <div class="wrap">
-    <p class="eyebrow">What we serve</p>
+    <p class="section-kicker">What we serve</p>
     <h2 class="section-title" id="menu-title">Menu highlights</h2>
     <p class="section-lead">{{ site.data.menu.intro }}</p>
     <div class="menu-highlights">
@@ -96,17 +99,17 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
       {% endfor %}
     </div>
     <p class="menu-page-actions">
-      <a class="btn btn-primary" href="menu.html">See the full menu</a>
+      <a class="btn btn-ember" href="menu.html">See the full menu</a>
     </p>
   </div>
 </section>
 
-<section class="section" id="about" aria-labelledby="about-title" style="padding-top:0;">
+<section class="section" id="about" aria-labelledby="about-title" style="padding-top:0;border-top:0;">
   <div class="wrap about-grid">
     <div>
-      <p class="eyebrow">The shop</p>
+      <p class="section-kicker">The shop</p>
       <h2 class="section-title" id="about-title">{{ site.data.site.about_title }}</h2>
-      <p>{{ site.data.site.about }}</p>
+      <p class="section-lead" style="margin-bottom:0;">{{ site.data.site.about }}</p>
       <ul class="facts">
         <li>About {{ site.data.site.seats }} seats</li>
         {% if site.data.site.wifi %}<li>Free Wi-Fi</li>{% endif %}
@@ -115,61 +118,54 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
         <li>Opened {{ site.data.site.opened }}</li>
       </ul>
     </div>
-    {% include photo-placeholder.html
-       variant="c"
-       uid="about"
-       label="Inside the shop"
-       caption="A photo of the seating and counter will go here." %}
-  </div>
-</section>
-
-<section class="section" id="gallery" aria-labelledby="gallery-title" style="padding-top:0;">
-  <div class="wrap">
-    <p class="eyebrow">Photos</p>
-    <h2 class="section-title" id="gallery-title">A look at the space</h2>
-    <p class="section-lead">The shop has photos and a logo to send. Until they arrive, these labeled blocks mark where pictures will go. They are not photos of another business.</p>
-    <div class="gallery-grid">
-      {% for shot in site.data.site.gallery %}
-        {% include photo-placeholder.html uid=forloop.index variant=shot.variant label=shot.label caption=shot.caption %}
-      {% endfor %}
+    <div class="photo-pair">
+      {% include picture.html
+         name="section-oak-room"
+         alt="A generated concept photograph of a small oak-lined coffee room"
+         widths="640,960,1280"
+         sizes="(max-width: 800px) 100vw, 28vw"
+         width=1280
+         height=720
+         label="Placeholder image · The room" %}
+      {% include picture.html
+         name="section-roaster"
+         alt="A generated concept photograph of a small-batch coffee roaster"
+         widths="640,960"
+         sizes="(max-width: 800px) 100vw, 28vw"
+         width=960
+         height=720
+         label="Placeholder image · The roaster" %}
     </div>
-  </div>
-</section>
-
-<section class="section" id="events" aria-labelledby="events-title" style="padding-top:0;">
-  <div class="wrap">
-    <p class="eyebrow">What's on</p>
-    <h2 class="section-title" id="events-title">Events</h2>
-    <p class="section-lead">{{ site.data.events.intro }}</p>
-    <div class="event-list">
-      {% for event in site.data.events.events %}
-      <article class="event-card">
-        <h3>{{ event.title }}</h3>
-        <p class="event-meta">{{ event.date_label }}{% if event.time_label %} · {{ event.time_label }}{% endif %}</p>
-        <p>{{ event.description }}</p>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="menu-page-actions"><a href="events.html">See all events</a></p>
   </div>
 </section>
 
 {% if site.data.site.back_room %}
 <section class="band" id="back-room" aria-labelledby="room-title">
-  <div class="wrap">
-    <h2 class="section-title" id="room-title">Reserve the back room</h2>
-    <p>{{ site.data.site.back_room_blurb }}</p>
-    <a class="btn btn-on-dark" href="{{ site.data.site.phone_href }}">
-      Call about the back room
-      {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" class="badge-on-dark" %}{% endif %}
-    </a>
+  <div class="wrap band-grid">
+    <div>
+      <p class="section-kicker">Groups</p>
+      <h2 class="section-title" id="room-title">Reserve the back room</h2>
+      <p>{{ site.data.site.back_room_blurb }}</p>
+      <a class="btn btn-ember" href="{{ site.data.site.phone_href }}">
+        Ask about the back room
+        {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" class="badge-on-ember" %}{% endif %}
+      </a>
+    </div>
+    {% include picture.html
+       name="section-first-fridays"
+       alt="A generated concept photograph of a small acoustic night in a coffee shop"
+       widths="640,960,1280"
+       sizes="(max-width: 800px) 100vw, 40vw"
+       width=1280
+       height=720
+       label="Placeholder image · First Friday in the room" %}
   </div>
 </section>
 {% endif %}
 
 <section class="section" id="parking" aria-labelledby="parking-title">
   <div class="wrap">
-    <p class="eyebrow">Getting here</p>
+    <p class="section-kicker">Getting here</p>
     <h2 class="section-title" id="parking-title">Map and parking</h2>
     <div class="map-panel">
       <div>
@@ -182,12 +178,20 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
           {% if site.data.site.address_note %}{{ site.data.site.address_note }}<br>{% endif %}
           {{ site.data.site.city }}, {{ site.data.site.state }}
         </p>
-        <a class="btn btn-primary" href="{{ site.data.site.maps_url }}">Open in Google Maps</a>
+        <p class="contact-row">
+          {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+          <a href="{{ site.data.site.phone_href }}">{{ site.data.site.phone }}</a>
+        </p>
+        <p class="contact-row">
+          {% if site.data.site.email_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+          <a href="{{ site.data.site.email_href }}">{{ site.data.site.email }}</a>
+        </p>
+        <a class="btn btn-ember" href="{{ site.data.site.maps_url }}">Open in Google Maps</a>
       </div>
       <div class="map-placeholder">
         {% include badge.html label="Placeholder" %}
-        <p class="photo-ph-label" style="color:var(--color-primary);font-size:1.5rem;">Map</p>
-        <p class="muted" style="margin:0;">A map pin will go here once the address is confirmed. Use the directions button for a Google Maps search of {{ site.data.site.maps_query }}.</p>
+        <p class="section-title" style="font-size:1.6rem;margin:0;">Map</p>
+        <p class="section-lead" style="margin:0;">A map pin will go here once the address is confirmed. Use the directions button for a Google Maps search of {{ site.data.site.maps_query }}.</p>
       </div>
     </div>
   </div>

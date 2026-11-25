@@ -1,13 +1,10 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <a class="wordmark" href="index.html">
-        <span class="wordmark-top">
-          <span class="wordmark-name">{{ site.data.site.wordmark_line1 }}</span>
-        </span>
-        <span class="wordmark-suffix">{{ site.data.site.wordmark_line2 }}</span>
+      <a class="brand" href="index.html">
+        <div class="wordmark">Ember <span>&amp;</span> Oak</div>
       </a>
-      <p class="muted" style="color:#E6D3B8;margin:1rem 0 0;">
+      <p class="order-note" style="margin-top:1rem;">
         {{ site.data.site.street_address }}<br>
         {% if site.data.site.address_note %}{{ site.data.site.address_note }}<br>{% endif %}
         {{ site.data.site.city }}, {{ site.data.site.state }}
@@ -20,16 +17,14 @@
     <div>
       <h2 class="footer-heading">Contact</h2>
       <p class="contact-row">
-        {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" class="badge-on-dark" %}{% endif %}
+        {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
         <a href="{{ site.data.site.phone_href }}">{{ site.data.site.phone }}</a>
       </p>
       <p class="contact-row">
-        {% if site.data.site.email_is_placeholder %}{% include badge.html label="Placeholder" class="badge-on-dark" %}{% endif %}
+        {% if site.data.site.email_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
         <a href="{{ site.data.site.email_href }}">{{ site.data.site.email }}</a>
       </p>
-      <p>
-        <a href="{{ site.data.site.maps_url }}">Get directions</a>
-      </p>
+      <p><a href="{{ site.data.site.maps_url }}">Get directions</a></p>
     </div>
   </div>
   {% if site.data.site.footer_credit and site.data.site.footer_credit != "" %}

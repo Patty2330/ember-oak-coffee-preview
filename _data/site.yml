@@ -6,6 +6,9 @@ preview: true
 preview_banner: "Preview, not live"
 robots: "noindex, nofollow"
 
+design_direction: "Live Coal"
+design_preset: "coffee-shop"
+
 name: "Ember & Oak Coffee Co."
 short_name: "Ember & Oak"
 wordmark_line1: "Ember & Oak"
@@ -35,6 +38,8 @@ email_is_placeholder: true
 parking: "Parking details will be added once we confirm where guests should park."
 parking_is_placeholder: true
 
+order_note: "Order at the counter when you visit. We don't have online order-ahead."
+
 # Leave empty to keep agency branding off the site.
 footer_credit: ""
 
@@ -47,9 +52,11 @@ back_room_blurb: "A back room is available for small groups to reserve. Call or 
 timezone: "America/Chicago"
 
 hero:
-  eyebrow: "Clarksville, Tennessee"
-  headline: "Small-batch coffee, roasted here on Maple Street."
-  subhead: "A neighborhood coffee shop with espresso, pour-overs, loose-leaf tea, and pastries from a local bakery. About 30 seats, free Wi-Fi, and a back room small groups can reserve."
+  eyebrow: "Clarksville, Tennessee · Maple Street"
+  headline_line1: "Live"
+  headline_line2: "coal"
+  headline: "Live coal."
+  subhead: "Small-batch coffee, roasted in-house. About 30 seats, a back room for small groups, and a roast you can still feel in the cup."
   cta_primary: "See the menu"
   cta_primary_href: "menu.html"
   cta_secondary: "Get directions"

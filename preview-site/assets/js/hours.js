@@ -55,9 +55,6 @@
   var closeM = toMinutes(today.close_24h);
   var isOpen = currentMinutes >= openM && currentMinutes < closeM;
 
-  var statusEls = document.querySelectorAll("[data-hours-status]");
-  var labelEl = document.querySelector("[data-hours-label]");
-
   function nextOpen() {
     for (var offset = isOpen ? 1 : 0; offset <= 7; offset++) {
       var day = (todayNum + offset) % 7;
@@ -70,28 +67,39 @@
   }
 
   var statusText;
+  var pillText;
+  var strongText;
   var openState;
   if (isOpen) {
     statusText = "Open now, until " + today.close;
+    pillText = "Open now · until " + today.close;
+    strongText = "Open now";
     openState = "true";
   } else {
     var nxt = nextOpen();
     if (nxt) {
       var when = Number(nxt.js_day) === todayNum ? "today" : nxt.day;
       statusText = "Closed now · Opens " + when + " at " + nxt.open;
+      pillText = "Closed · opens " + when + " " + nxt.open;
+      strongText = "Closed now";
     } else {
       statusText = "See hours below";
+      pillText = "See hours";
+      strongText = "See hours";
     }
     openState = "false";
   }
-  statusEls.forEach(function (statusEl) {
-    statusEl.textContent = statusText;
+
+  document.querySelectorAll("[data-hours-status]").forEach(function (statusEl) {
+    var text = statusEl.hasAttribute("data-open-pill") ? pillText : statusText;
+    var slot = statusEl.querySelector("[data-hours-status-text]");
+    if (slot) slot.textContent = text;
+    else statusEl.textContent = text;
     statusEl.setAttribute("data-open", openState);
   });
 
-  if (labelEl && today) {
-    labelEl.textContent = "Today, " + today.day + ": " + today.open + "–" + today.close;
-  }
+  var strongEl = document.querySelector("[data-hours-line-strong]");
+  if (strongEl) strongEl.textContent = strongText;
 
   document.querySelectorAll("[data-hours-day]").forEach(function (row) {
     if (Number(row.getAttribute("data-hours-day")) === todayNum) {
