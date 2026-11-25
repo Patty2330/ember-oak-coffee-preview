@@ -15,6 +15,8 @@ This is a private preview site for a prospective client, Ember & Oak Coffee Co. 
 
 Add a permanent rule here every time Jalen corrects something.
 
+- (Nov 25, 2026, from Jalen) No agent may call work done. Every branch or PR goes to Code Reviewer, which builds and tests it, checks it in a real browser, and gives a PASS with proof (commands, output, screenshots). Web Chief merges or shows Jalen only after that PASS.
+
 - 2026-11-25 (Jalen, via Web Chief): For every client site, Creative must first research and compare top sites in that industry and make or update a matching preset before any build work starts. Don't start or continue building until that comparison and preset exist.
 
 - 2026-11-25 (Jalen): Jalen picks the final design after seeing Creative's visual directions; don't build a direction until he has chosen it.
