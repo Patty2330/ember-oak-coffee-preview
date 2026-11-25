@@ -8,7 +8,8 @@ intro: >-
 events:
   - title: Live acoustic music
     date_label: "First Friday of each month"
+    next_date: "Friday, December 4, 2026"
     time_label: "6:00 PM – 8:00 PM"
     description: >-
-      Live acoustic music at the shop, the first Friday of each month, from 6 to 8 PM.
+      Live acoustic music at the shop, from 6 to 8 PM.
     recurring: true

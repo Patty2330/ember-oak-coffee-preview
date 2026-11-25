@@ -11,7 +11,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Figtree:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -21,21 +21,26 @@
   
   <header class="site-header">
   <div class="site-header-inner">
-    <a class="wordmark" href="index.html">
-      <span class="wordmark-top">
-        <span class="wordmark-name">Ember & Oak</span>
-        <span class="badge">Placeholder</span>
+    <div class="header-brand">
+      <a class="wordmark" href="index.html">
+        <span class="wordmark-top">
+          <span class="wordmark-name">Ember & Oak</span>
+          <span class="badge">Placeholder</span>
 
-      </span>
-      <span class="wordmark-suffix">Coffee Co.</span>
-    </a>
+        </span>
+        <span class="wordmark-suffix">Coffee Co.</span>
+      </a>
+      <p class="header-hours" data-hours-status data-hours-suffix="Maple Street">
+        <span class="header-hours-dot" aria-hidden="true"></span>
+        <span data-hours-status-text>See hours below</span>
+      </p>
+    </div>
     <nav class="site-nav" aria-label="Primary">
       <a href="menu.html">Menu</a>
       <a href="events.html">Events</a>
       <a href="index.html#hours">Hours</a>
       <a href="index.html#visit">Visit</a>
     </nav>
-    <p class="header-hours" data-hours-status>See hours below</p>
     
     <a class="btn btn-primary header-call" href="tel:+19315550100">
       Call
@@ -49,9 +54,9 @@
   <main id="main">
     <section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-panel">
       <p class="eyebrow">Clarksville, Tennessee</p>
-      <h1 class="hero-headline">Small-batch coffee, roasted here on Maple Street.</h1>
+      <h1 class="hero-headline">Roasted here, in small batches, on Maple Street.</h1>
       <p class="hero-subhead">A neighborhood coffee shop with espresso, pour-overs, loose-leaf tea, and pastries from a local bakery. About 30 seats, free Wi-Fi, and a back room small groups can reserve.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="menu.html">See the menu</a>
@@ -70,24 +75,24 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-hero" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-hero)"/>
     
-    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
-    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
-    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
-    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#1F100C" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF3EB" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#1F100C" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#1F100C" opacity="0.25"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
     <span class="badge badge-on-dark">Placeholder</span>
 
-    <p class="photo-ph-label">The shop</p>
-    <p class="photo-ph-caption">A photo of the space will go here. This block is a placeholder, not a stock photo.</p>
+    <p class="photo-ph-label">The roaster</p>
+    <p class="photo-ph-caption">A photo of the roaster, or beans just after a roast, will go here. This block is a placeholder, not a stock photo.</p>
   </figcaption>
 </figure>
 
@@ -99,6 +104,9 @@
     <p class="eyebrow">Plan your visit</p>
     <h2 class="section-title" id="visit-title">Hours, location, and how to find us</h2>
     <p class="section-lead">Most people come by for a cup, the hours, and a place to sit. Everything you need to drop in is right here.</p>
+    
+    <p class="order-note">Order at the counter when you visit. We don't have online order-ahead.</p>
+    
     <div class="visit-grid" id="visit">
       <article class="card">
         <h3>Hours</h3>
@@ -174,6 +182,11 @@
           <p>Clarksville, TN </p>
         </address>
         <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=214+Maple+Street,+Clarksville,+TN">Get directions</a>
+        <p class="parking-note">
+          <span class="badge">Placeholder</span>
+
+          Parking details will be added once we confirm where guests should park.
+        </p>
       </article>
       <article class="card">
         <h3>Contact</h3>
@@ -193,7 +206,28 @@
   </div>
 </section>
 
-<section class="section" id="menu" aria-labelledby="menu-title">
+<section class="section" id="events" aria-labelledby="events-title">
+  <div class="wrap">
+    <p class="eyebrow">What's on</p>
+    <h2 class="section-title" id="events-title">Events</h2>
+    <p class="section-lead">A simple place to post what's coming up at the shop. The monthly music night below is from the shop; more events can be added here anytime.</p>
+    <div class="event-list">
+      
+      <article class="event-card">
+        <h3>Live acoustic music</h3>
+        <p class="event-meta">
+          Friday, December 4, 2026 · 6:00 PM – 8:00 PM
+        </p>
+        <p class="muted">First Friday of each month, in the shop.</p>
+        <p>Live acoustic music at the shop, from 6 to 8 PM.</p>
+      </article>
+      
+    </div>
+    <p class="menu-page-actions"><a href="events.html">See all events</a></p>
+  </div>
+</section>
+
+<section class="section" id="menu" aria-labelledby="menu-title" style="padding-top:0;">
   <div class="wrap">
     <p class="eyebrow">What we serve</p>
     <h2 class="section-title" id="menu-title">Menu highlights</h2>
@@ -398,17 +432,17 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-about" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-about)"/>
     
-    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF6EE" stroke-width="3" opacity="0.4"/>
-    <line x1="70" y1="200" x2="330" y2="200" stroke="#8C5A3C" stroke-width="2" opacity="0.3"/>
-    <rect x="100" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
-    <rect x="200" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF3EB" stroke-width="3" opacity="0.4"/>
+    <line x1="70" y1="200" x2="330" y2="200" stroke="#6B2E1C" stroke-width="2" opacity="0.3"/>
+    <rect x="100" y="230" width="80" height="50" fill="#1F100C" opacity="0.2"/>
+    <rect x="200" y="230" width="80" height="50" fill="#1F100C" opacity="0.2"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -438,17 +472,17 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-1" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-1)"/>
     
-    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
-    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
-    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
-    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#1F100C" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF3EB" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#1F100C" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#1F100C" opacity="0.25"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -469,17 +503,17 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-2" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-2)"/>
     
-    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#6B2A24" opacity="0.18"/>
-    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.45"/>
-    <circle cx="140" cy="170" r="14" fill="#6B2A24" opacity="0.3"/>
-    <circle cx="250" cy="150" r="10" fill="#6B2A24" opacity="0.25"/>
+    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#1F100C" opacity="0.18"/>
+    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#E25A1C" stroke-width="3" opacity="0.45"/>
+    <circle cx="140" cy="170" r="14" fill="#1F100C" opacity="0.3"/>
+    <circle cx="250" cy="150" r="10" fill="#1F100C" opacity="0.25"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -500,17 +534,17 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-3" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-3)"/>
     
-    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF6EE" stroke-width="3" opacity="0.4"/>
-    <line x1="70" y1="200" x2="330" y2="200" stroke="#8C5A3C" stroke-width="2" opacity="0.3"/>
-    <rect x="100" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
-    <rect x="200" y="230" width="80" height="50" fill="#6B2A24" opacity="0.2"/>
+    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF3EB" stroke-width="3" opacity="0.4"/>
+    <line x1="70" y1="200" x2="330" y2="200" stroke="#6B2E1C" stroke-width="2" opacity="0.3"/>
+    <rect x="100" y="230" width="80" height="50" fill="#1F100C" opacity="0.2"/>
+    <rect x="200" y="230" width="80" height="50" fill="#1F100C" opacity="0.2"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -531,16 +565,16 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-4" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-4)"/>
     
-    <path d="M200 90 L230 170 L200 250 L170 170 Z" fill="#6B2A24" opacity="0.22"/>
-    <circle cx="200" cy="310" r="48" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.4"/>
-    <circle cx="200" cy="310" r="18" fill="#8C5A3C" opacity="0.35"/>
+    <path d="M200 90 L230 170 L200 250 L170 170 Z" fill="#1F100C" opacity="0.22"/>
+    <circle cx="200" cy="310" r="48" fill="none" stroke="#E25A1C" stroke-width="3" opacity="0.4"/>
+    <circle cx="200" cy="310" r="18" fill="#6B2E1C" opacity="0.35"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -561,17 +595,17 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-5" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-5)"/>
     
-    <circle cx="200" cy="210" r="86" fill="none" stroke="#6B2A24" stroke-width="3" opacity="0.35"/>
-    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF6EE" stroke-width="2" opacity="0.5"/>
-    <circle cx="200" cy="210" r="22" fill="#6B2A24" opacity="0.35"/>
-    <rect x="120" y="320" width="160" height="10" rx="5" fill="#6B2A24" opacity="0.25"/>
+    <circle cx="200" cy="210" r="86" fill="none" stroke="#1F100C" stroke-width="3" opacity="0.35"/>
+    <circle cx="200" cy="210" r="58" fill="none" stroke="#FBF3EB" stroke-width="2" opacity="0.5"/>
+    <circle cx="200" cy="210" r="22" fill="#1F100C" opacity="0.35"/>
+    <rect x="120" y="320" width="160" height="10" rx="5" fill="#1F100C" opacity="0.25"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -592,17 +626,17 @@
   <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
     <defs>
       <linearGradient id="glow-6" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FBF6EE" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#8A6A1F" stop-opacity="0.15"/>
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="500" fill="#d9b894"/>
+    <rect width="400" height="500" fill="#c4744a"/>
     <rect width="400" height="500" fill="url(#glow-6)"/>
     
-    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#6B2A24" opacity="0.18"/>
-    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#8A6A1F" stroke-width="3" opacity="0.45"/>
-    <circle cx="140" cy="170" r="14" fill="#6B2A24" opacity="0.3"/>
-    <circle cx="250" cy="150" r="10" fill="#6B2A24" opacity="0.25"/>
+    <ellipse cx="200" cy="240" rx="110" ry="70" fill="#1F100C" opacity="0.18"/>
+    <path d="M80 360 C140 280, 260 280, 320 360" fill="none" stroke="#E25A1C" stroke-width="3" opacity="0.45"/>
+    <circle cx="140" cy="170" r="14" fill="#1F100C" opacity="0.3"/>
+    <circle cx="250" cy="150" r="10" fill="#1F100C" opacity="0.25"/>
     
   </svg>
   <figcaption class="photo-ph-meta">
@@ -618,34 +652,48 @@
   </div>
 </section>
 
-<section class="section" id="events" aria-labelledby="events-title" style="padding-top:0;">
-  <div class="wrap">
-    <p class="eyebrow">What's on</p>
-    <h2 class="section-title" id="events-title">Events</h2>
-    <p class="section-lead">A simple place to post what's coming up at the shop. The monthly music night below is from the shop; more events can be added here anytime.</p>
-    <div class="event-list">
-      
-      <article class="event-card">
-        <h3>Live acoustic music</h3>
-        <p class="event-meta">First Friday of each month · 6:00 PM – 8:00 PM</p>
-        <p>Live acoustic music at the shop, the first Friday of each month, from 6 to 8 PM.</p>
-      </article>
-      
-    </div>
-    <p class="menu-page-actions"><a href="events.html">See all events</a></p>
-  </div>
-</section>
-
 
 <section class="band" id="back-room" aria-labelledby="room-title">
-  <div class="wrap">
-    <h2 class="section-title" id="room-title">Reserve the back room</h2>
-    <p>A back room is available for small groups to reserve. Call or email to ask about a time (contact details below are placeholders until the shop confirms them).</p>
-    <a class="btn btn-on-dark" href="tel:+19315550100">
-      Call about the back room
-      <span class="badge badge-on-dark">Placeholder</span>
+  <div class="wrap band-grid">
+    <div>
+      <h2 class="section-title" id="room-title">Reserve the back room</h2>
+      <p>A back room is available for small groups to reserve. Call or email to ask about a time (contact details below are placeholders until the shop confirms them).</p>
+      <a class="btn btn-on-dark" href="tel:+19315550100">
+        Ask about the back room
+        <span class="badge">Placeholder</span>
 
-    </a>
+      </a>
+    </div>
+    
+
+
+
+
+<figure class="photo-ph ">
+  <svg class="photo-ph-art" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="glow-back-room" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FBF3EB" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#E25A1C" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="500" fill="#c4744a"/>
+    <rect width="400" height="500" fill="url(#glow-back-room)"/>
+    
+    <rect x="70" y="80" width="260" height="300" rx="8" fill="none" stroke="#FBF3EB" stroke-width="3" opacity="0.4"/>
+    <line x1="70" y1="200" x2="330" y2="200" stroke="#6B2E1C" stroke-width="2" opacity="0.3"/>
+    <rect x="100" y="230" width="80" height="50" fill="#1F100C" opacity="0.2"/>
+    <rect x="200" y="230" width="80" height="50" fill="#1F100C" opacity="0.2"/>
+    
+  </svg>
+  <figcaption class="photo-ph-meta">
+    <span class="badge badge-on-dark">Placeholder</span>
+
+    <p class="photo-ph-label">The back room</p>
+    <p class="photo-ph-caption">A photo of the reservable back room will go here.</p>
+  </figcaption>
+</figure>
+
   </div>
 </section>
 
@@ -688,7 +736,7 @@
         </span>
         <span class="wordmark-suffix">Coffee Co.</span>
       </a>
-      <p class="muted" style="color:#E6D3B8;margin:1rem 0 0;">
+      <p class="muted" style="color:#F3D2B8;margin:1rem 0 0;">
         214 Maple Street<br>
         Next to the hardware store<br>
         Clarksville, TN

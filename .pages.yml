@@ -19,6 +19,12 @@ content:
       - name: preview_banner
         label: Banner text
         type: string
+      - name: design_direction
+        label: Design direction
+        type: string
+      - name: design_preset
+        label: Design preset
+        type: string
       - name: name
         label: Business name
         type: string
@@ -85,6 +91,9 @@ content:
       - name: parking_is_placeholder
         label: Parking is still a placeholder
         type: boolean
+      - name: order_note
+        label: How to order (leave empty if unused)
+        type: text
       - name: footer_credit
         label: Footer credit (leave empty to hide)
         type: string
@@ -247,6 +256,9 @@ content:
             label: Date
             type: string
             required: true
+          - name: next_date
+            label: Next date (specific upcoming date, if known)
+            type: string
           - name: time_label
             label: Time
             type: string

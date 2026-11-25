@@ -6,7 +6,7 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
 ---
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-panel">
       <p class="eyebrow">{{ site.data.site.hero.eyebrow }}</p>
       <h1 class="hero-headline">{{ site.data.site.hero.headline }}</h1>
       <p class="hero-subhead">{{ site.data.site.hero.subhead }}</p>
@@ -22,8 +22,8 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
        class="photo-ph-hero"
        variant="a"
        uid="hero"
-       label="The shop"
-       caption="A photo of the space will go here. This block is a placeholder, not a stock photo." %}
+       label="The roaster"
+       caption="A photo of the roaster, or beans just after a roast, will go here. This block is a placeholder, not a stock photo." %}
   </div>
 </section>
 
@@ -32,6 +32,9 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
     <p class="eyebrow">Plan your visit</p>
     <h2 class="section-title" id="visit-title">Hours, location, and how to find us</h2>
     <p class="section-lead">Most people come by for a cup, the hours, and a place to sit. Everything you need to drop in is right here.</p>
+    {% if site.data.site.order_note %}
+    <p class="order-note">{{ site.data.site.order_note }}</p>
+    {% endif %}
     <div class="visit-grid" id="visit">
       <article class="card">
         <h3>Hours</h3>
@@ -47,6 +50,10 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
           <p>{{ site.data.site.city }}, {{ site.data.site.state }}{% if site.data.site.postal_code %} {{ site.data.site.postal_code }}{% endif %}</p>
         </address>
         <a class="btn btn-primary" href="{{ site.data.site.maps_url }}">Get directions</a>
+        <p class="parking-note">
+          {% if site.data.site.parking_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+          {{ site.data.site.parking }}
+        </p>
       </article>
       <article class="card">
         <h3>Contact</h3>
@@ -64,7 +71,28 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
   </div>
 </section>
 
-<section class="section" id="menu" aria-labelledby="menu-title">
+<section class="section" id="events" aria-labelledby="events-title">
+  <div class="wrap">
+    <p class="eyebrow">What's on</p>
+    <h2 class="section-title" id="events-title">Events</h2>
+    <p class="section-lead">{{ site.data.events.intro }}</p>
+    <div class="event-list">
+      {% for event in site.data.events.events %}
+      <article class="event-card">
+        <h3>{{ event.title }}</h3>
+        <p class="event-meta">
+          {% if event.next_date %}{{ event.next_date }}{% else %}{{ event.date_label }}{% endif %}{% if event.time_label %} · {{ event.time_label }}{% endif %}
+        </p>
+        {% if event.next_date and event.date_label %}<p class="muted">{{ event.date_label }}, in the shop.</p>{% endif %}
+        <p>{{ event.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="menu-page-actions"><a href="events.html">See all events</a></p>
+  </div>
+</section>
+
+<section class="section" id="menu" aria-labelledby="menu-title" style="padding-top:0;">
   <div class="wrap">
     <p class="eyebrow">What we serve</p>
     <h2 class="section-title" id="menu-title">Menu highlights</h2>
@@ -136,33 +164,22 @@ description: Ember & Oak Coffee Co. is a neighborhood coffee shop at 214 Maple S
   </div>
 </section>
 
-<section class="section" id="events" aria-labelledby="events-title" style="padding-top:0;">
-  <div class="wrap">
-    <p class="eyebrow">What's on</p>
-    <h2 class="section-title" id="events-title">Events</h2>
-    <p class="section-lead">{{ site.data.events.intro }}</p>
-    <div class="event-list">
-      {% for event in site.data.events.events %}
-      <article class="event-card">
-        <h3>{{ event.title }}</h3>
-        <p class="event-meta">{{ event.date_label }}{% if event.time_label %} · {{ event.time_label }}{% endif %}</p>
-        <p>{{ event.description }}</p>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="menu-page-actions"><a href="events.html">See all events</a></p>
-  </div>
-</section>
-
 {% if site.data.site.back_room %}
 <section class="band" id="back-room" aria-labelledby="room-title">
-  <div class="wrap">
-    <h2 class="section-title" id="room-title">Reserve the back room</h2>
-    <p>{{ site.data.site.back_room_blurb }}</p>
-    <a class="btn btn-on-dark" href="{{ site.data.site.phone_href }}">
-      Call about the back room
-      {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" class="badge-on-dark" %}{% endif %}
-    </a>
+  <div class="wrap band-grid">
+    <div>
+      <h2 class="section-title" id="room-title">Reserve the back room</h2>
+      <p>{{ site.data.site.back_room_blurb }}</p>
+      <a class="btn btn-on-dark" href="{{ site.data.site.phone_href }}">
+        Ask about the back room
+        {% if site.data.site.phone_is_placeholder %}{% include badge.html label="Placeholder" %}{% endif %}
+      </a>
+    </div>
+    {% include photo-placeholder.html
+       variant="c"
+       uid="back-room"
+       label="The back room"
+       caption="A photo of the reservable back room will go here." %}
   </div>
 </section>
 {% endif %}

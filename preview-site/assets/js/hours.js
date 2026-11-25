@@ -85,7 +85,12 @@
     openState = "false";
   }
   statusEls.forEach(function (statusEl) {
-    statusEl.textContent = statusText;
+    var text = statusText;
+    var suffix = statusEl.getAttribute("data-hours-suffix");
+    if (suffix) text = statusText + " · " + suffix;
+    var slot = statusEl.querySelector("[data-hours-status-text]");
+    if (slot) slot.textContent = text;
+    else statusEl.textContent = text;
     statusEl.setAttribute("data-open", openState);
   });
 
